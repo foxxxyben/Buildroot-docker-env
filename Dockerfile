@@ -5,8 +5,6 @@ FROM debian:stable
 
 ENV BR_VERSION 2017.08
 
-description="Container with everything needed to run Buildroot"
-
 # Setup environment
 ENV DEBIAN_FRONTEND noninteractive
 
