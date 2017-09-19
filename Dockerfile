@@ -25,9 +25,9 @@ RUN apt-get -q -y clean
 RUN sed -i 's/# \(en_US.UTF-8\)/\1/' /etc/locale.gen
 RUN /usr/sbin/locale-gen
 
-VOLUME /src/buildroot
-
 RUN wget -qO- http://buildroot.org/downloads/buildroot-$BR_VERSION.tar.gz \
   | tar xz && mv buildroot-$BR_VERSION /src/buildroot
+
+VOLUME /src/buildroot
 
 WORKDIR /src/buildroot
