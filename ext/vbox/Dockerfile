@@ -1,10 +1,10 @@
 FROM foxxxyben/buildroot
 
+ENV VBOX /src/ext/vbox
+
 RUN apt-get install -y -qq --no-install-recommends \
     kpartx syslinux dosfstools mtools \
-    e2fsprogs util-linux coreutils mount \
-
-ENV VBOX /src/ext/vbox
+    e2fsprogs util-linux coreutils mount
 
 RUN mkdir -p $VBOX \
     cd $VBOX
