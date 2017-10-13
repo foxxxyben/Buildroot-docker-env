@@ -6,8 +6,9 @@ ENV VBOX /src/ext/vbox
 #     kpartx syslinux dosfstools mtools \
 #     e2fsprogs util-linux coreutils mount
 
-RUN mkdir -p $VBOX \
-    cd $VBOX
+RUN mkdir -p $VBOX
+
+RUN cd $VBOX
 
 RUN git clone https://github.com/xenogenesi/vbox-buildroot-vagrant.git
 
