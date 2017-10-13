@@ -6,7 +6,7 @@ RUN apt-get install -y -qq --no-install-recommends \
 
 ENV VBOX /src/ext/vbox
 
-RUN mkdir -p $VBOX /
+RUN mkdir -p $VBOX \
     cd $VBOX
 
 RUN git clone https://github.com/xenogenesi/vbox-buildroot-vagrant.git
