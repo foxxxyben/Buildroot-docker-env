@@ -5,5 +5,6 @@ FROM buildroot/base
 
 ENV BR_VERSION 2017.08
 
-RUN wget -qO- http://buildroot.org/downloads/buildroot-$BR_VERSION.tar.gz \
+RUN mkdir /src/buildroot \
+  wget -qO- http://buildroot.org/downloads/buildroot-$BR_VERSION.tar.gz \
   | tar xz && mv buildroot-$BR_VERSION /src/buildroot
