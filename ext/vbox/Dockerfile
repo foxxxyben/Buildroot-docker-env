@@ -10,6 +10,4 @@ RUN mkdir -p $VBOX
 
 RUN git clone https://github.com/xenogenesi/vbox-buildroot-vagrant.git $VBOX
 
-ENTRYPOINT make BR2_EXTERNAL=$VBOX \
-    BR2_DEFCONFIG=$VBOX/configs/vbox64-vagrant_defconfig \
-    menuconfig
+RUN make BR2_EXTERNAL=$VBOX clean
