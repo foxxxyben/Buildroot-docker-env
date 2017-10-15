@@ -12,9 +12,8 @@ RUN cd $VBOX
 
 RUN git clone https://github.com/xenogenesi/vbox-buildroot-vagrant.git
 
-RUN echo 'name: BR2_VBOX' >external.desc
-
 RUN cd /src/buildroot/buildroot-$BR_VERSION
 
 RUN make BR2_EXTERNAL=$VBOX \
-    BR2_DEFCONFIG=$VBOX/configs/vbox64-vagrant_defconfig
+    BR2_DEFCONFIG=$VBOX/configs/vbox64-vagrant_defconfig \
+    menuconfig
